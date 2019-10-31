@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    height: 200px !important;
+}
+
+.price {
+    display: inline;
+}
