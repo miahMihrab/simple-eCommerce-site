@@ -111,7 +111,6 @@ router.post('/checkout', (req, res) => {
         source: req.body.stripeToken
     }).then(customer => stripe.charges.create({
         amount,
-        description: 'Web Dev Ebook',
         currency: 'usd',
         customer: customer.id
     })).then(charge => {
