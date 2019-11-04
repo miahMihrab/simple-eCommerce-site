@@ -1,0 +1,54 @@
+<div class="container py-5">
+    {{#if products}}
+    {{#each products}}
+
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 col-sm-offset-3">
+            <ul class="list-group">
+                <li class="list-group-item">
+
+                    <strong>{{this.item.item}}</strong>
+                    <span class="badge badge-success">${{ this.price }}</span>
+                    <div class="btn-group">
+                        <button class="btn btn-primary btn-xs dropdown-toggle" type="button"
+                            data-toggle="dropdown">Action <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="" class="nav-link">Reduce by 1</a></li>
+                            <li><a href="" class="nav-link">Remove All</a></li>
+                        </ul>
+                    </div>
+
+                    <span class="badge badge-secondary float-right">{{ this.qty }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    {{/each}}
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-offset-3 col-sm-offset-3">
+            <strong>Total: {{ totalPrice }}</strong>
+        </div>
+    </div>
+    <hr>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-offset-3 col-sm-offset-3">
+            <button class="btn btn-success" type="button"><a href="/checkout" style="text-decoration: none"
+                    class="text-white">Checkout</a></button>
+        </div>
+    </div>
+
+    {{else}}
+
+    <div class="row">
+        <div class="col-sm-6 col-md-offset-3 col-sm-offset-3">
+            <h2>Not Item in cart</h2>
+        </div>
+    </div>
+
+    {{/if}}
+</div>

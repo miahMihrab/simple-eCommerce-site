@@ -3,37 +3,37 @@ const mongoose = require('mongoose')
 const products = [
     new Product({
         imagePath: "/pubg.jpg",
-        title: "Player Unknown Battleground",
+        item: "Player Unknown Battleground",
         description: "Awsome shooting game",
         price: 12
     }),
     new Product({
         imagePath: "/battlefield1.jpg",
-        title: "Battlefield I",
+        item: "Battlefield I",
         description: "Awsome FPP shooting game",
         price: 12
     }),
     new Product({
         imagePath: "/callofduty.jpg",
-        title: "Call of duty",
+        item: "Call of duty",
         description: "Best shooting game",
         price: 12
     }),
     new Product({
         imagePath: "/doom.jpg",
-        title: "Doom",
+        item: "Doom",
         description: "Awsome game",
         price: 12
     }),
     new Product({
         imagePath: "/ghostrecon.jpg",
-        title: "Ghost Recon",
+        item: "Ghost Recon",
         description: "Awsome shooting game",
         price: 12
     }),
     new Product({
         imagePath: "/underlords.jpg",
-        title: "Underlords",
+        item: "Underlords",
         description: "Everyone should play this one",
         price: 12
     })

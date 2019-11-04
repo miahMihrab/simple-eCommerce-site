@@ -1,0 +1,24 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="display-3.mt-3.pt-5">
+                Your Total Cost Is
+            </h1>
+            <p class="lead">${{ session.cart.totalPrice }}</p>
+            <form action="/checkout" method="post">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="STRIPE_PUBLISHABLE_KEY" data-amount={{ totalPrice }} data-name='Web Dev Ebook'
+                    data-description="Ebook written by Test" data-image="" data-locale="auto">
+                    </script>
+
+                <script>
+                    //Hide default stripe butotn
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = "none";
+
+                </script>
+
+                <button type="submit" class="">Purchase</button>
+            </form>
+        </div>
+    </div>
+</section>
